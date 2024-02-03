@@ -140,15 +140,18 @@ ol {
   flex-direction: column;
   gap: 1rem 0;
   padding-left: 1.5rem;
-  li {
-    padding-left: 1rem;
-    strong {
-      font-weight: var(--fw-700);
-    }
-  }
-  li::marker {
-    font-family: var(--ff-body);
-  }
+}
+
+li {
+  padding-left: 1rem;
+}
+
+li strong {
+  font-weight: var(--fw-700);
+}
+
+li::marker {
+  font-family: var(--ff-body);
 }
 
 hr {
@@ -182,7 +185,6 @@ article {
   display: flex;
   flex-direction: column;
   gap: 2rem 0;
-  /* padding: var(--spacing-medium); */
 }
 
 /* SECTION HEADER */
@@ -214,12 +216,10 @@ article {
 
 /* SECTION INGREDIENTS & INSTRUCTIONS */
 
-.section-ingredients,
-.section-instructions {
-  li::marker {
-    color: var(--clr-primary);
-    font-weight: var(--fw-600);
-  }
+.section-ingredients li::marker,
+.section-instructions li::marker {
+  color: var(--clr-primary);
+  font-weight: var(--fw-600);
 }
 
 /* SECTION NUTRITION */
