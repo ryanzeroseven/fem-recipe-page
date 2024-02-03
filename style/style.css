@@ -1,0 +1,268 @@
+/* SECTION ROOT VARIABLES */
+
+:root {
+  --ff-heading: 'Young Serif', system-ui;
+  --ff-body: 'Outfit', system-ui;
+
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 1.75rem;
+  --fs-400: 2.5rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700; /* Not used */
+
+  --clr-primary: hsl(14, 45%, 36%);
+  --clr-secondary: hsl(332, 51%, 32%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-roseWhite: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-lightGrey: hsl(30, 18%, 87%);
+  --clr-wengeBrown: hsl(30, 10%, 34%);
+  --clr-darkCharcoal: hsl(24, 5%, 18%);
+
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 4rem; /* Not used */
+
+  --border-radius: 1rem;
+}
+
+/* SECTION RESETS AND GENERAL STYLING */
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+  font-family: var(--ff-body);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-400);
+  display: grid;
+  place-items: center;
+  background: var(--clr-eggshell);
+
+  container-type: inline-size;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: none;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: var(--ff-heading);
+  margin-bottom: var(--spacing-small);
+  font-weight: var(--fw-400);
+}
+
+h1 {
+  font-size: var(--fs-400);
+  color: var(--clr-darkCharcoal);
+}
+
+h2 {
+  font-size: var(--fs-300);
+  color: var(--clr-primary);
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+  color: var(--clr-wengeBrown);
+}
+
+/* Shared list styles for this design */
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  padding-left: 1.5rem;
+  li {
+    padding-left: 1rem;
+    strong {
+      font-weight: var(--fw-600);
+    }
+  }
+  li::marker {
+    font-family: var(--ff-body);
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--clr-lightGrey);
+}
+
+/* SECTION SPECIFIC STYLING */
+
+/* SECTION MAIN */
+
+main {
+  max-width: 45rem;
+  background: var(--clr-white);
+  border-radius: var(--border-radius);
+  margin: 8rem 0;
+  padding: var(--spacing-medium);
+}
+
+/* SECTION HEADER */
+
+.header p {
+  margin-bottom: var(--spacing-medium);
+}
+
+/* SECTION ARTICLE */
+
+article {
+  /* Instead of setting margins on each section */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  /* padding: var(--spacing-medium); */
+}
+
+/* SECTION HEADER */
+
+.header figure {
+  border-radius: calc(var(--border-radius) / 2);
+  overflow: clip;
+  margin-bottom: var(--spacing-medium);
+}
+
+/* SECTION ASIDE */
+
+.section-preptime {
+  background: var(--clr-roseWhite);
+  border-radius: calc(var(--border-radius) / 2);
+  padding: 1.5rem;
+}
+
+.section-preptime h3 {
+  font-size: var(--fs-200);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-600);
+  color: var(--clr-secondary);
+}
+
+.section-preptime li::marker {
+  color: var(--clr-secondary);
+}
+
+/* SECTION INGREDIENTS & INSTRUCTIONS */
+
+.section-ingredients,
+.section-instructions {
+  li::marker {
+    color: var(--clr-primary);
+    font-weight: var(--fw-600);
+  }
+}
+
+/* SECTION NUTRITION */
+
+.section-nutrition p {
+  margin-bottom: var(--spacing-small);
+}
+
+.section-nutrition table {
+  border-collapse: collapse;
+  border-spacing: var(--spacing-small);
+  width: 100%;
+  color: var(--clr-wengeBrown);
+}
+
+.section-nutrition table colgroup col {
+  width: 50%;
+}
+
+.section-nutrition td {
+  padding: var(--spacing-small) 0;
+}
+
+.section-nutrition tr:not(:last-child) {
+  border-bottom: 1px solid var(--clr-lightGrey);
+}
+
+.section-nutrition tr td:first-child {
+  padding-left: var(--spacing-medium);
+}
+
+.section-nutrition tr td:nth-child(2) {
+  color: var(--clr-primary);
+  font-weight: var(--fw-700);
+}
+
+/* SECTION CONTAINER QUERIES */
+
+@container (768px > width ) {
+  * {
+    --fs-400: 2rem;
+  }
+
+  h1 {
+    text-wrap: pretty;
+  }
+
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding-top: 0;
+    border-radius: 0;
+  }
+
+  .header {
+    padding-top: 0;
+    figure {
+      overflow: unset;
+      margin-left: calc(var(--spacing-medium) * -1);
+      margin-right: calc(var(--spacing-medium) * -1);
+    }
+  }
+}
