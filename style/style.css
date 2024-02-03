@@ -79,7 +79,6 @@ body {
   display: grid;
   place-items: center;
   background: var(--clr-eggshell);
-  background: red;
 
   container-type: inline-size;
 }
