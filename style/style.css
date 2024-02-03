@@ -30,6 +30,23 @@
   --border-radius: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primary: hsl(15, 25%, 50%);
+    --clr-secondary: hsl(3, 50%, 40%);
+
+    --clr-white: hsl(10, 30%, 25%);
+    --clr-roseWhite: hsl(330, 100%, 5%);
+    --clr-eggshell: hsl(20, 25%, 25%);
+    --clr-lightGrey: hsl(30, 20%, 30%);
+    --clr-wengeBrown: hsl(25, 0%, 75%);
+    --clr-darkCharcoal: hsl(44, 45%, 75%);
+  }
+  header img {
+    filter: brightness(50%);
+  }
+}
+
 /* SECTION RESETS AND GENERAL STYLING */
 
 /* makes sizing simpler */
@@ -126,7 +143,7 @@ ol {
   li {
     padding-left: 1rem;
     strong {
-      font-weight: var(--fw-600);
+      font-weight: var(--fw-700);
     }
   }
   li::marker {

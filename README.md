@@ -38,8 +38,9 @@ Your challenge is to build out this recipe page and get it looking as close to t
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS color-scheme
 - CSS nesting
-- FlexBox
+- CSS FlexBox
 - CSS Grid
 
 ### What I learned
