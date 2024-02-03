@@ -30,8 +30,7 @@ Your challenge is to build out this recipe page and get it looking as close to t
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Recipe page](https://ryanzeroseven.github.io/fem-recipe-page/)
 
 ## My process
 
@@ -89,7 +88,10 @@ New things I worked with:
 
 ### Continued development
 
-For future projects I want to focus on writing more and better semantic HTML and CSS. I want to use 'aria-labels' more in places to make it a habit and understand what they are doing. Another concept would be container queries and different size units like: ch, cqi, svw and svh. As for layouts, Grid is still a magic black box, learning responsive layouts with it should be very valuable.
+- For future projects I want to focus on writing more and better semantic HTML and CSS. I want to use 'aria-labels' more in places to make it a habit and understand what they are doing.
+- Reusability, working with utility classes instead of a specific property declaration on a single element or class.
+- Another concept would be container queries and different size units like: ch, cqi, svw and svh.
+- As for responsive layouts, Grid is still a magic black box, so spending more time in that seems like a good next step.
 
 ### Useful resources
 
@@ -99,7 +101,7 @@ For future projects I want to focus on writing more and better semantic HTML and
 
 ## Author
 
-- Website - [ryanzeroseven](https://github.com/ryanzeroseven)
+- GitHub - [ryanzeroseven](https://github.com/ryanzeroseven)
 - Frontend Mentor - [@ryanzeroseven](https://www.frontendmentor.io/profile/ryanzeroseven)
 
 ## Acknowledgments
