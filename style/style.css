@@ -160,6 +160,17 @@ hr {
   background: var(--clr-lightGrey);
 }
 
+/* Utility class to hide elements but keep it accessible */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* SECTION SPECIFIC STYLING */
 
 /* SECTION MAIN */
@@ -185,10 +196,6 @@ article {
   display: flex;
   flex-direction: column;
   gap: 2rem 0;
-}
-
-article .h2-d-none {
-  display: none;
 }
 
 /* SECTION HEADER */
